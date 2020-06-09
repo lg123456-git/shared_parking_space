@@ -1,5 +1,6 @@
-package com.wn.common.entry;
+package com.wn.common.entity;
 
+import com.wn.common.constant.Const;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -29,12 +30,12 @@ public class MyRsp {
 
     public static MyRsp success(Object content){
 
-        return new MyRsp(20000,"发送成功",content);
+        return new MyRsp(Const.Status.STATUS_SUCCESS,"发送成功",content);
     }
 
 
     public static MyRsp error(){
-        return new MyRsp(50000,"发送失败");
+        return new MyRsp(Const.Status.STATUS_ERROR,"发送失败");
     }
 
     /**

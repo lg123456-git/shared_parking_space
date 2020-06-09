@@ -1,4 +1,4 @@
-package com.wn.common.entry;
+package com.wn.common.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
