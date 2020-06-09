@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wn.user.mapper.PropertyMapper">
+
+ <insert id="propertyInsert"  parameterType="com.wn.user.pojo.Property">
+
+    insert into t_property(p_name,password,tel) values(#{propertyName},#{password},#{tel})
+
+ </insert>
+<!--检测注册名是否重复-->
+    <select id="selectByName" resultType="int">
+        select count(*) from t_property where p_name=#{propertyName}
+    </select>
+
+</mapper>

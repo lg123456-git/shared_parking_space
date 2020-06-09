@@ -33,6 +33,10 @@ public class MyRsp {
         return new MyRsp(Const.Status.STATUS_SUCCESS,"发送成功",content);
     }
 
+    public static MyRsp success1(Integer code,String msg){
+
+        return new MyRsp(code,msg);
+    }
 
     public static MyRsp error(){
         return new MyRsp(Const.Status.STATUS_ERROR,"发送失败");

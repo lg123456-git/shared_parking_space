@@ -6,6 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+
+@MapperScan("com.wn.user.mapper")
 @SpringBootApplication
 @EnableEurekaClient
 @EnableSwagger2
