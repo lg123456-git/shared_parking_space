@@ -32,6 +32,10 @@ public class MyRsp {
         return new MyRsp(20000,"发送成功",content);
     }
 
+    public static MyRsp success1(Integer code,String msg){
+
+        return new MyRsp(code,msg);
+    }
 
     public static MyRsp error(){
         return new MyRsp(50000,"发送失败");
